@@ -125,17 +125,27 @@ export default class InoutrecordController extends BaseController {
 
   @Http.post("/inoutrecord/update")
   async update() {
-    const { userId } = this.ctx.request.body;
+    const { deviceOrderNo } = this.ctx.request.body;
     await this.inoutrecordService.update({
-      userId
+      deviceOrderNo
     }, {
-      deviceOrderNo: `${moment().format("YYYYMMDDHHmmssSSS")}${_.random(1000, 9999)}`,
-      deviceSerialNo: `${moment().format("YYYYMMDDHHmmssSSS")}`
+      userId: this.generateRandomStr("string", 5)
     });
     this.ctx.body = {
       code: 0,
       msg: "SUCCESS"
     }
+  }
+  //生成随机字符串
+  generateRandomStr(type: "string" | "integer" = "string", length = 5) {
+    let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    if (type === "integer") {
+      chars = "0123456789";
+    }
+    let noceStr = "",
+      maxPos = chars.length;
+    while (length--) noceStr += chars[(Math.random() * maxPos) | 0];
+    return noceStr;
   }
 
   @Http.post("/inoutrecord/delete")
