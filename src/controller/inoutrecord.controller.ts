@@ -20,4 +20,20 @@ export default class InoutrecordController extends BaseController {
       data: result
     }
   }
+
+  @get("/userCard/inoutrecords")
+  async getInoutrecordsByUserCardNo() {
+    const { userCardNo } = this.ctx.request.query
+    const result = await this.inoutrecordService.findAll({
+      where: {
+        userCardNo
+      },
+      take: 10
+    });
+    this.ctx.body = {
+      code: 0,
+      msg: "SUCCESS",
+      data: result
+    }
+  }
 }
