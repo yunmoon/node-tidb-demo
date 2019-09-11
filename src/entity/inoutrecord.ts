@@ -1,10 +1,10 @@
 
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from "zonetk-core";
-@Entity({ name: "inoutrecords-bak" })
+import { Entity, Column, CreateDateColumn, UpdateDateColumn } from "zonetk-core";
+@Entity({ name: "inoutrecords1" })
 export class Inoutrecord {
 
-    @PrimaryGeneratedColumn()
-    id: number;
+    // @PrimaryGeneratedColumn()
+    // id: number;
 
     @Column()
     tradeTime: Date;
@@ -28,43 +28,43 @@ export class Inoutrecord {
     lineNo: string;
 
     @Column()
-    deviceType:string;
+    deviceType: string;
 
     @Column()
-    deviceSerialNo:string;
+    deviceSerialNo: string;
 
     @Column()
-    deviceStatus:string;
+    deviceStatus: string;
 
     @Column()
-    qrcode:string;
+    qrcode: string;
 
     @Column()
-    scanTime:Date;
+    scanTime: Date;
 
     @Column()
-    userAccountType:string;
+    userAccountType: string;
 
     @Column()
-    payAccountNo:string;
+    payAccountNo: string;
 
     @Column()
-    qrcodeType:string;
+    qrcodeType: string;
 
     @Column()
-    qrcodeCertificate:string;
+    qrcodeCertificate: string;
 
     @Column()
-    channelNo:string;
+    channelNo: string;
 
     @Column()
-    cardPlatform:string;
+    cardPlatform: string;
 
     @Column()
-    dataSource:number;
+    dataSource: number;
 
     @Column()
-    shardingId:number;
+    shardingId: number;
 
     @Column()
     deviceNo: string;
