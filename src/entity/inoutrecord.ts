@@ -19,7 +19,52 @@ export class Inoutrecord {
     userCardNo: string;
 
     @Column()
+    deviceOrderNo: string;
+
+    @Column()
     stationNo: string;
+
+    @Column()
+    lineNo: string;
+
+    @Column()
+    deviceType:string;
+
+    @Column()
+    deviceSerialNo:string;
+
+    @Column()
+    deviceStatus:string;
+
+    @Column()
+    qrcode:string;
+
+    @Column()
+    scanTime:Date;
+
+    @Column()
+    userAccountType:string;
+
+    @Column()
+    payAccountNo:string;
+
+    @Column()
+    qrcodeType:string;
+
+    @Column()
+    qrcodeCertificate:string;
+
+    @Column()
+    channelNo:string;
+
+    @Column()
+    cardPlatform:string;
+
+    @Column()
+    dataSource:number;
+
+    @Column()
+    shardingId:number;
 
     @Column()
     deviceNo: string;
