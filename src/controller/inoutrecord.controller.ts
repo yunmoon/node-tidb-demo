@@ -36,4 +36,19 @@ export default class InoutrecordController extends BaseController {
       data: result
     }
   }
+
+  @get("/inoutrecord/count")
+  async countInoutrecordsByUserId() {
+    const { userId } = this.ctx.request.query
+    const result = await this.inoutrecordService.count({
+      where: {
+        userId
+      }
+    });
+    this.ctx.body = {
+      code: 0,
+      msg: "SUCCESS",
+      data: result
+    }
+  }
 }
