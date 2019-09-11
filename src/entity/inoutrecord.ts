@@ -16,10 +16,13 @@ export class Inoutrecord {
     userId: string;
 
     @Column()
+    userCardNo: string;
+
+    @Column()
     stationNo: string;
 
     @Column()
-    deviceNo:string;
+    deviceNo: string;
 
     @Column()
     @CreateDateColumn()
