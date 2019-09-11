@@ -1,5 +1,5 @@
 
-import { Entity, Column, CreateDateColumn, UpdateDateColumn } from "zonetk-core";
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from "zonetk-core";
 @Entity({ name: "inoutrecords1" })
 export class Inoutrecord {
 
@@ -18,7 +18,7 @@ export class Inoutrecord {
     @Column()
     userCardNo: string;
 
-    @Column()
+    @PrimaryGeneratedColumn()
     deviceOrderNo: string;
 
     @Column()
