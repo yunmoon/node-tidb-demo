@@ -150,9 +150,10 @@ export default class InoutrecordController extends BaseController {
 
   @Http.post("/inoutrecord/delete")
   async delete() {
-    const { userId } = this.ctx.request.body;
+    // const { userId } = this.ctx.request.body;
+    const inoutrecord = await this.inoutrecordService.findOne();
     await this.inoutrecordService.delete({
-      userId
+      deviceOrderNo: inoutrecord.deviceOrderNo
     });
     this.ctx.body = {
       code: 0,
