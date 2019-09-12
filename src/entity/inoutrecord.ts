@@ -1,6 +1,6 @@
 
 import { Entity, Column, PrimaryColumn, CreateDateColumn, UpdateDateColumn } from "zonetk-core";
-@Entity({ name: "inoutrecords1" })
+@Entity({ name: "inoutrecords_cp" })
 export class Inoutrecord {
 
     // @PrimaryGeneratedColumn()
